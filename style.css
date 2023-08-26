@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+
+
+*{
+    scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      line-height: 30px;
+      padding: 10px;
+      position: absolute;
+      margin-left: 30%;
+    }
+    
+    section{
+      height: 100%;
+      width: 100%;
+      position: relative;
+      top: 0; 
+    }
+    
+    header {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 5%;
+    }
+    
+    p{
+      margin-left: 8%;
+    }
+    
+    code {
+    display: block;
+    margin-left: 0;
+    overflow: wrap;
+    background-color: GhostWhite;
+    border-radius: 7px;
+    padding: 12px;
+    }
+    
+    a{
+      margin: 10%;
+    }
+    
+    #navbar{
+      height: 100%;
+      width: 30%;
+      border-right: 3px solid #a3a0a0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    
+    nav  ul{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+      height: 100%;
+      padding: 0;
+      
+    }
+    
+    nav > ul > li{
+      border-top: 2px solid #8f8f8f;
+      height: 8%;
+      margin: 10px;
+      width: 100%;
+     
+    }
+    
+    li > a {
+      text-decoration: none;
+      color: black; 
+    }
+    
+    @media only screen and (max-width: 620px) {
+      body{
+        position: absolute;
+        margin: 0;
+      }
+    
+      section{
+        top: 8;
+        
+      }
+    
+      #navbar{
+        position: relative;
+        top: 0;
+        border-right: none;
+        height: 50%;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border: 2px double #a3a0a0;
+        text-align: center;
+      }
+    
+      nav > ul > li{
+      border-top: none;
+      margin: 0;
+      top: 0;
+      }
+    
+      nav ul li :hover{
+        background-color: black;
+        color: #a3a0a0;
+      }
+    
+      nav header{
+        margin-bottom: 0;
+        border-bottom: 2px dotted #a3a0a0;
+      }
+    
+      nav ul{
+        font-size: 16px;
+         border-top: none;
+      }
+    }
+    
+    
+    
