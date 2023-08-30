@@ -33,14 +33,7 @@
       margin-left: 8%;
     }
     
-    code {
-    display: block;
-    margin-left: 0;
-    overflow: wrap;
-    background-color: GhostWhite;
-    border-radius: 7px;
-    padding: 12px;
-    }
+    
     
     a{
       margin: 10%;
@@ -77,7 +70,7 @@
     }
     
     li > a {
-      text-decoration: none;
+      text-decoration: wavy;
       color: black; 
     }
     
@@ -127,4 +120,57 @@
     }
     
     
-    
+    .main-section .box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: gray;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-left: 30px;
+  margin-top: 45px;
+}
+.main-section:hover .box {
+  transform: rotateY(25deg);
+}
+.main-section.box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.main-section .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.main-section .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-section .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,grey,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.main-section .box:hover .imgBx:before {
+  opacity: 1;
+}
+.main-section .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
